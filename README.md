@@ -1,4 +1,4 @@
->**Note**: This repository is a fork of Udacity's public repository for the purpose of fulfilling the requirements of the "Post your Work on Github" project, which is the third and final part of the requirements to complete the Udacity PDSND program. The original repository can be found at [here](https://github.com/udacity/pdsnd_github).
+>**Note**: This repository is a fork of Udacity's public repository for the purpose of fulfilling the requirements of the "Post your Work on Github" project, which is the third and final part of the requirements to complete the Udacity PDSND program. The original repository can be found [here](https://github.com/udacity/pdsnd_github).
 
 ### Date Created
 
