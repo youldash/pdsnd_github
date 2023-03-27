@@ -18,7 +18,8 @@ The purpose of creating this new repository, which is forked from Udacity's publ
 
 ### Updates
 
-* [`bikeshare.py` (2023-03-28)](https://github.com/youldash/pdsnd_github/blob/master/bikeshare/bikeshare.py) (bikeshare.py was recently branched out for adding documentation to the script. These changes are merged into the main (i.e., master) repository via a pull request (made locally)).
+* [`bikeshare.py` (2023-03-28)](https://github.com/youldash/pdsnd_github/blob/master/bikeshare/bikeshare.py) (`bikeshare.py` was recently branched out for adding documentation to the script. These changes are merged into the main (i.e., master) repository via a pull request (made locally)).
+* [`bikeshare.py` (2023-03-28)](https://github.com/youldash/pdsnd_github/blob/master/bikeshare/bikeshare.py) (Added new comments and changed a few var names (e.g., from i to idx). Also, documentation added to the main function for better readability (all changes made locally)).
 
 ### Credits
 
