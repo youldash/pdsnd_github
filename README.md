@@ -6,11 +6,11 @@ Tuesday, March 28, 2023.
 
 ### Project Title
 
-Post your Work on Github.
+**Post your Work on Github.**
 
 ### Description
 
-The purpose of creating this new repository, which is forked from Udacity's public repository, is to fulfill the requirements of the "Post your Work on Github" project, which is the third and final part of the requirements to complete the Udacity PDSND program. The repository will contain the code and documentation for the project, which involves analyzing bike share data from three different cities using Python. By forking the original repository, we have a starting point with pre-existing code and documentation, which we can build upon and modify to meet the requirements of the project. Additionally, this new repository will allow us to share our work with others and showcase our skills in data analysis and collaboration using GitHub.
+The purpose of creating this new repository, which is forked from Udacity's public repository, is to fulfill the requirements of the "Post your Work on Github" project, which is the third and final part of the requirements to complete the Udacity [Programming for Data Science with Python (PDSND)](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104) program. The repository will contain the code and documentation for the project, which involves analyzing bike share data from three different cities using Python. By forking the original repository, we have a starting point with pre-existing code and documentation, which we can build upon and modify to meet the requirements of the project. Additionally, this new repository will allow us to share our work with others and showcase our skills in data analysis and collaboration using GitHub.
 
 ### Files Used
 
@@ -18,7 +18,7 @@ The purpose of creating this new repository, which is forked from Udacity's publ
 
 ### Credits
 
-We would like to extend our gratitude to Udacity for providing the original repository at [https://github.com/udacity/pdsnd_github](https://github.com/udacity/pdsnd_github), which served as the foundation for this project. Additionally, we would like to acknowledge the Udacity community for inspiring us to complete this work and for their support throughout the [Programming for Data Science with Python (PDSND) Nanodegree](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104) program.
+We would like to extend our gratitude to Udacity for providing the original repository at [https://github.com/udacity/pdsnd_github](https://github.com/udacity/pdsnd_github), which served as the foundation for this project. Additionally, we would like to acknowledge the Udacity community for inspiring us to complete this work and for their support throughout the [Programming for Data Science with Python (PDSND)](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104) Nanodegree program.
 
 ### License
 
