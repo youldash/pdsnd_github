@@ -16,6 +16,10 @@ The purpose of creating this new repository, which is forked from Udacity's publ
 
 * [`bikeshare.py`](https://github.com/youldash/pdsnd_github/blob/master/bikeshare/bikeshare.py) (bikeshare.py Python script for analyzing US BikeShare Data).
 
+### Updates
+
+* [`bikeshare.py` (2023-03-28)](https://github.com/youldash/pdsnd_github/blob/master/bikeshare/bikeshare.py) (bikeshare.py was recently branched out for adding documentation to the script. These changes are merged into the main (i.e., master) repository via a pull request (made locally)).
+
 ### Credits
 
 We would like to extend our gratitude to Udacity for providing the original repository at [https://github.com/udacity/pdsnd_github](https://github.com/udacity/pdsnd_github), which served as the foundation for this project. Additionally, we would like to acknowledge the Udacity community for inspiring us to complete this work and for their support throughout the [Programming for Data Science with Python (PDSND)](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104) Nanodegree program.
