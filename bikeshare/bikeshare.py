@@ -1,11 +1,23 @@
-# Using Python version 3.6.3
-# Submitted by: Mustafa YOULDASH, Ph.D.
+"""
+BikeShare - Python project to explore US BikeShare data.
+The program allows the user to view statistics on bike share usage between three cities:
+Chicago, New York City, and Washington, DC.
+
+This script requires the following packages to be installed: pandas and numpy.
+
+Using Python version 3.6.3
+Submitted by: Mustafa YOULDASH, Ph.D.
+
+Usage:
+    python bikeshare.py
+"""
 
 import time
 import pandas as pd
 import numpy as np
 
 
+# Set the file names and location for the data files
 CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
@@ -15,12 +27,15 @@ def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
 
+    Args:
+        None.
+
     Returns:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        (str) city - name of the city to analyze.
+        (str) month - name of the month to filter by, or "all" to apply no month filter.
+        (str) day - name of the day of week to filter by, or "all" to apply no day filter.
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hello! Let\'s explore some US BikeShare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         
@@ -70,12 +85,12 @@ def load_data(city, month, day):
     Loads data for the specified city and filters by month and day if applicable.
     
     Args:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        (str) city - name of the city to analyze.
+        (str) month - name of the month to filter by, or "all" to apply no month filter.
+        (str) day - name of the day of week to filter by, or "all" to apply no day filter.
     
     Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
+        df - Pandas DataFrame containing city data filtered by month and day.
     """
     df = pd.read_csv(CITY_DATA[city])
     
@@ -102,8 +117,20 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
-
+    """
+    Displays statistics on the most frequent times of travel.
+    
+    Args:
+        df (DataFrame): The BikeShare data as a pandas DataFrame.
+        
+    Returns:
+        None.
+    
+    This function takes in a BikeShare data DataFrame and uses it to calculate and print out the most frequent times
+    of travel for the user. It displays the most common month, day of the week, and start hour of travel, based on
+    the data provided. If any of the parameters are not found in the data, the function will simply print out that
+    the data is not available.
+    """
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
@@ -125,7 +152,21 @@ def time_stats(df):
 
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    """
+    Displays statistics on the most popular stations and trip.
+    
+    Args:
+        df (DataFrame): The BikeShare data as a pandas DataFrame.
+        
+    Returns:
+        None.
+    
+    This function takes in a BikeShare data DataFrame and uses it to calculate and print out statistics on the most
+    popular start and end stations, as well as the most frequent combination of start and end stations. It displays
+    the total number of trips that started and ended at each station, as well as the total number of trips that
+    included each station as a part of their journey. If any of the data is not available, the function will print
+    out that the data is not available.
+    """
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
@@ -149,7 +190,20 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """
+    Displays statistics on the total and average trip duration.
+    
+    Args:
+        df (DataFrame): The BikeShare data as a pandas DataFrame.
+        
+    Returns:
+        None.
+    
+    This function takes in a BikeShare data DataFrame and uses it to calculate and print out statistics on the total
+    and average trip duration. It displays the total travel time, the average travel time, and the longest and
+    shortest trips taken, based on the data provided. If any of the data is not available, the function will simply
+    print out that the data is not available.
+    """
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -169,7 +223,21 @@ def trip_duration_stats(df):
 
 
 def user_stats(df):
-    """Displays statistics on bikeshare users."""
+    """
+    Displays statistics on BikeShare users.
+    
+    Args:
+        df (DataFrame): The BikeShare data as a pandas DataFrame.
+        
+    Returns:
+        None.
+    
+    This function takes in a BikeShare data DataFrame and uses it to calculate and print out statistics on BikeShare
+    users. It displays the counts of each user type (e.g., subscriber, customer), as well as the counts of each
+    gender, if applicable. It also displays the earliest, most recent, and most common birth year of users, if that
+    information is available in the DataFrame. If any of the data is not available, the function will print out that
+    the data is not available.
+    """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
@@ -213,15 +281,17 @@ def user_stats(df):
 def display_raw_data(df):
     """
     Displays raw data from a Pandas DataFrame in an interactive manner, prompting the user for input.
-    
-    With this update, after the analysis is displayed for the selected city,
-    month and day, the user is prompted to see the raw data. If the user enters 'yes',
-    the display_raw_data() function is called to display the data in an interactive manner.
-    After the raw data is displayed, the user is again prompted if they would like to
-    restart the analysis or not.
-    
+        
     Args:
-        df (pandas.DataFrame): The pandas DataFrame containing the raw data
+        df (DataFrame): The BikeShare data as a pandas DataFrame.
+
+    Returns:
+        None.
+
+    This function prompts the user to specify whether they want to see raw BikeShare data or not. If the user enters
+    "yes", the function displays the first five rows of the DataFrame, then prompts the user again to ask if they
+    want to see five more rows. This process continues until the user enters "no". If the user enters "no" at the
+    first prompt, the function simply returns and does not display any data.
     """
     i = 0 # Increment counter
     pd.set_option('display.max_columns', 200)
@@ -245,6 +315,21 @@ def display_raw_data(df):
 
             
 def main():
+    """
+    Runs the BikeShare analysis program.
+
+    Args:
+        None.
+
+    Returns:
+        None.
+
+    This function is the entry point for the BikeShare analysis program. It first loads the BikeShare data from CSV files
+    for a specific city selected by the user. It then prompts the user to specify what type of statistics they would
+    like to see (e.g., time statistics, station statistics, user statistics). Once the user has made their selection, the
+    corresponding analysis function is called and the relevant statistics are displayed to the user. The user can then
+    choose to see more data or exit the program.
+    """
     
     while True:
         city, month, day = get_filters()
