@@ -8,10 +8,17 @@ This script requires the following packages to be installed: pandas and numpy.
 Using Python version 3.6.3
 Submitted by: Mustafa YOULDASH, Ph.D.
 
+Version:
+    v1.0.1.
+
+Last Updated:
+    March 28, 2023 at 02:35:30 Arabic EST.
+
 Usage:
     python bikeshare.py
 """
 
+# Imports
 import time
 import pandas as pd
 import numpy as np
@@ -293,7 +300,7 @@ def display_raw_data(df):
     want to see five more rows. This process continues until the user enters "no". If the user enters "no" at the
     first prompt, the function simply returns and does not display any data.
     """
-    i = 0 # Increment counter
+    idx = 0 # Increment counter
     pd.set_option('display.max_columns', 200)
 
     while True:
@@ -303,15 +310,15 @@ def display_raw_data(df):
             break
             
         elif raw == 'yes':
-            print(df[i: i+5])
-            i += 5
+            print(df[idx: idx+5])
+            idx += 5
             
-            if i >= len(df):
+            if idx >= len(df):
                 print("End of data reached.")
                 break
                 
         else:
-            print("Invalid input. Please enter only a 'yes' or a 'no'.")
+            print("Invalid input. Please enter either a 'yes', or a 'no'.")
 
             
 def main():
@@ -331,6 +338,7 @@ def main():
     choose to see more data or exit the program.
     """
     
+    # Loop until the user decides not to restart the program for additional interactivity
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
@@ -349,4 +357,8 @@ def main():
 
 
 if __name__ == "__main__":
+    """
+    In a nutshell, the if __name__ == "__main__": statement in bikeshare.py is used to define the main entry point for the script,
+    which in turn calls the main() function to coordinate the execution of the other functions and generate output for the user.
+    """
 	main()
