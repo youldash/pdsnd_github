@@ -14,7 +14,7 @@ The purpose of creating this new repository, which is forked from Udacity's publ
 
 ### Files Used
 
-* [`bikeshare.py`](https://github.com/youldash/pdsnd_github/blob/master/bikeshare/bikeshare.py) (bikeshare.py Python script for analyzing US Bike-share Data).
+* [`bikeshare.py`](https://github.com/youldash/pdsnd_github/blob/master/bikeshare/bikeshare.py) (bikeshare.py Python script for analyzing US BikeShare Data).
 
 ### Credits
 
