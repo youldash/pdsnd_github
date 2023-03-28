@@ -363,6 +363,8 @@ def main():
     
     # Loop until the user decides not to restart the program for additional interactivity
     while True:
+        
+        # Function added for refactoring purposes
         run_analysis()
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
