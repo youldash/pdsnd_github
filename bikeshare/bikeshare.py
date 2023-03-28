@@ -9,10 +9,10 @@ Using Python version 3.6.3
 Submitted by: Mustafa YOULDASH, Ph.D.
 
 Version:
-    v1.0.1.
+    v1.0.2.
 
 Last Updated:
-    March 28, 2023 at 02:35:30 Arabic EST.
+    March 28, 2023 at 03:21:00 Arabic EST.
 
 Usage:
     python bikeshare.py
