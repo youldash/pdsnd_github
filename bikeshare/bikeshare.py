@@ -317,10 +317,33 @@ def display_raw_data(df):
                 print("End of data reached.")
                 break
                 
-        else:
+        else:')
             print("Invalid input. Please enter either a 'yes', or a 'no'.")
 
-            
+
+def run_analysis():
+    """
+    Function added for refactoring purposes.
+    
+    This way, the code inside the while loop is grouped together in a single function,
+    making it easier to understand and modify.
+    The loop now simply calls the run_analysis() function repeatedly until the user decides to quit.
+    
+    Added:
+        March 28, 2023.
+    """
+    city, month, day = get_filters()
+    df = load_data(city, month, day)
+
+    time_stats(df)
+    station_stats(df)
+    trip_duration_stats(df)
+    user_stats(df)
+
+    # Added function to display raw data
+    display_raw_data(df)
+
+
 def main():
     """
     Runs the BikeShare analysis program.
@@ -340,16 +363,7 @@ def main():
     
     # Loop until the user decides not to restart the program for additional interactivity
     while True:
-        city, month, day = get_filters()
-        df = load_data(city, month, day)
-
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
-        
-        # Added function to display raw data
-        display_raw_data(df)
+        run_analysis()
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
